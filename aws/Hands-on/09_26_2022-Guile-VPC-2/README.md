@@ -83,6 +83,7 @@ ssh ec2-user@[Your private EC2 private IP]
 ### Part 3 - Creating NAT Gateway
 
 -  discuss about how to connect to internet from the Private EC2 in private subnet 
+-  NAT Gateway is not free and has no Free Tier
 
 Step 1 : Create Elastic IP
 
