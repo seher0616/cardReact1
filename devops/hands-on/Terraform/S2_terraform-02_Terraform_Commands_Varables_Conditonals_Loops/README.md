@@ -472,7 +472,7 @@ resource "aws_instance" "tf-ec2" {
 resource "aws_s3_bucket" "tf-s3" {
   bucket = var.s3_bucket_name
   tags = {
-    Name = "${local.mytag}-come from locals"
+    Name = "${local.mytag}-come-from-locals"
   }
 }
 ```
