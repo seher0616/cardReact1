@@ -114,6 +114,12 @@ exit
 docker ps -a
 ```
 
+or
+
+```bash
+docker container ls -a
+```
+
 - Run the second `ubuntu` os with interactive shell open and name container as `clarus` and show that this `ubuntu` container is different from the previous one.
 
 ```bash
