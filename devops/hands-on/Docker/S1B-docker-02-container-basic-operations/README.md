@@ -165,7 +165,7 @@ docker start clarus && docker container ls
 - Connect to the interactive shell of running `clarus` container and `exit` afterwards.
 
 ```bash
-docker attach clarus
+docker exec -it clarus
 ```
 
 - Show that `clarus` container has stopped by listing all containers.
@@ -174,10 +174,10 @@ docker attach clarus
 docker container ls -a
 ```
 
-- Restart the first container by its `ID` again and attach to it to show that the file we have created is still there under the home folder, and exit afterwards.
+- Restart the first container by its `ID` again and exec -it to it to show that the file we have created is still there under the home folder, and exit afterwards.
 
 ```bash
-docker start 4e6 && docker attach 4e6
+docker start 4e6 && docker exec -it 4e6
 ```
 
 - Show that we can get more information about `clarus` container by using `docker inspect` command and explain the properties.
