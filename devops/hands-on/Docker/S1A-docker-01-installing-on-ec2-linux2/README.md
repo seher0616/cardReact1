@@ -80,32 +80,33 @@ newgrp docker
 docker version
 
 Client:
- Version:           19.03.6-ce
- API version:       1.40
- Go version:        go1.13.4
- Git commit:        369ce74
- Built:             Fri May 29 04:01:26 2020
+ Version:           20.10.17
+ API version:       1.41
+ Go version:        go1.18.6
+ Git commit:        100c701
+ Built:             Wed Sep 28 23:10:17 2022
  OS/Arch:           linux/amd64
- Experimental:      false
+ Context:           default
+ Experimental:      true
 
 Server:
  Engine:
-  Version:          19.03.6-ce
-  API version:      1.40 (minimum version 1.12)
-  Go version:       go1.13.4
-  Git commit:       369ce74
-  Built:            Fri May 29 04:01:57 2020
+  Version:          20.10.17
+  API version:      1.41 (minimum version 1.12)
+  Go version:       go1.18.6
+  Git commit:       a89b842
+  Built:            Wed Sep 28 23:10:55 2022
   OS/Arch:          linux/amd64
   Experimental:     false
  containerd:
-  Version:          1.3.2
-  GitCommit:        ff48f57fc83a8c44cf4ad5d672424a98ba37ded6
+  Version:          1.6.6
+  GitCommit:        10c12954828e7c7c9b6e0ea9b0c02b01407d3ae1
  runc:
-  Version:          1.0.0-rc10
-  GitCommit:        dc9208a3303feef5b3839f4323d9beb36df0a9dd
+  Version:          1.1.3
+  GitCommit:        1e7bb5b773162b57333d57f612fd72e3f8612d94
  docker-init:
-  Version:          0.18.0
-  GitCommit:        fec3683
+  Version:          0.19.0
+  GitCommit:        de40ad0
 ```
 
 - Check the docker info without `sudo`.
@@ -114,43 +115,46 @@ Server:
 docker info
 
 Client:
+ Context:    default
  Debug Mode: false
 
 Server:
- Containers: 1
+ Containers: 0
   Running: 0
   Paused: 0
-  Stopped: 1
- Images: 2
- Server Version: 19.03.6-ce
+  Stopped: 0
+ Images: 0
+ Server Version: 20.10.17
  Storage Driver: overlay2
   Backing Filesystem: xfs
   Supports d_type: true
   Native Overlay Diff: true
+  userxattr: false
  Logging Driver: json-file
  Cgroup Driver: cgroupfs
+ Cgroup Version: 1
  Plugins:
   Volume: local
   Network: bridge host ipvlan macvlan null overlay
   Log: awslogs fluentd gcplogs gelf journald json-file local logentries splunk syslog
  Swarm: inactive
- Runtimes: runc
+ Runtimes: io.containerd.runc.v2 io.containerd.runtime.v1.linux runc
  Default Runtime: runc
  Init Binary: docker-init
- containerd version: ff48f57fc83a8c44cf4ad5d672424a98ba37ded6
- runc version: dc9208a3303feef5b3839f4323d9beb36df0a9dd
- init version: fec3683
+ containerd version: 10c12954828e7c7c9b6e0ea9b0c02b01407d3ae1
+ runc version: 1e7bb5b773162b57333d57f612fd72e3f8612d94
+ init version: de40ad0
  Security Options:
   seccomp
    Profile: default
- Kernel Version: 4.14.181-140.257.amzn2.x86_64
+ Kernel Version: 5.10.144-127.601.amzn2.x86_64
  Operating System: Amazon Linux 2
  OSType: linux
  Architecture: x86_64
  CPUs: 1
- Total Memory: 983.3MiB
- Name: ip-172-31-30-143.us-east-2.compute.internal
- ID: AK6G:E2CQ:G45L:SEJY:FH6K:Q2CX:MQC6:6WJV:NYH2:6WOQ:BLWZ:3I7F
+ Total Memory: 964.8MiB
+ Name: ip-172-31-29-80.ec2.internal
+ ID: LIYF:SOW7:SB35:3WNG:WB76:C356:2KLZ:G4J2:KLAD:CZ7K:P2NG:DUOW
  Docker Root Dir: /var/lib/docker
  Debug Mode: false
  Registry: https://index.docker.io/v1/
@@ -158,7 +162,7 @@ Server:
  Experimental: false
  Insecure Registries:
   127.0.0.0/8
- Live Restore Enabled: false
+ Live Restore Enabled: fals
 ```
 
 ## Part 3 - Configure a Cloudformation Template for a Docker machine
