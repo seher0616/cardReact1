@@ -135,7 +135,7 @@ exit
 - Show the list of all containers again and explain the second `ubuntu` containers' properties and how the names of containers are given.
 
 ```bash
-docker ps -a
+docker container ls -a
 ```
 
 - Restart the first container by its `ID`.
@@ -147,19 +147,19 @@ docker start 4e6
 - Show only running containers and explain the status.
 
 ```bash
-docker ps
+docker container ls
 ```
 
 - Stop the first container by its `ID` and show it is stopped.
 
 ```bash
-docker stop 4e6 && docker ps -a
+docker stop 4e6 && docker container ls -a
 ```
 
 - Restart the `clarus` container by its name and list only running containers.
 
 ```bash
-docker start clarus && docker ps
+docker start clarus && docker container ls
 ```
 
 - Connect to the interactive shell of running `clarus` container and `exit` afterwards.
@@ -171,7 +171,7 @@ docker attach clarus
 - Show that `clarus` container has stopped by listing all containers.
 
 ```bash
-docker ps -a
+docker container ls -a
 ```
 
 - Restart the first container by its `ID` again and attach to it to show that the file we have created is still there under the home folder, and exit afterwards.
@@ -201,5 +201,5 @@ docker rm clarus
 - Show that both of containers are not listed anymore.
 
 ```bash
-docker ps -a
+docker container ls -a
 ```
